@@ -19,7 +19,7 @@ seed = args.seed
 dataset='housing'
 
 
-original_file = '/home/zhengyihao/TabularMark/datasets/boston_housing_prices/HousingData.csv'
+original_file = '../../datasets/boston_housing_prices/HousingData.csv'
 origin = pd.read_csv(original_file)
 
 np.random.seed(seed)
@@ -59,7 +59,7 @@ results = {
     'indices': indices
 }
 
-np.save(f"/home/zhengyihao/TabularMark/datasets/boston_housing_prices/watermarked/{dataset}-{seed}.npy", results)
+np.save(f"../../datasets/boston_housing_prices/watermarked/{dataset}-{seed}.npy", results)
 
 
 

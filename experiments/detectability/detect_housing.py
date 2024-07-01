@@ -19,12 +19,12 @@ args = parser.parse_args()
 seed = args.seed
 dataset='housing'
 
-original_file = '/home/zhengyihao/TabularMark/datasets/boston_housing_prices/HousingData.csv'
+original_file = '../../datasets/boston_housing_prices/HousingData.csv'
 origin = pd.read_csv(original_file)
 
 z_scores = []
 for seed in range(10000, 10001):
-    loaded_results = np.load(f"/home/zhengyihao/TabularMark/datasets/boston_housing_prices/discussion/gaussian-{dataset}-{seed}.npy", allow_pickle=True).item()
+    loaded_results = np.load(f"../../datasets/boston_housing_prices/discussion/gaussian-{dataset}-{seed}.npy", allow_pickle=True).item()
     watermarked_data = loaded_results['watermarked_data']
     # watermarked_data = origin
     divide_seeds = loaded_results['divide_seeds']

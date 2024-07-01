@@ -17,7 +17,7 @@ seed = args.seed
 dataset='covertype'
 
 
-original_file = '/home/zhengyihao/TabularMark/datasets/covertype/cover_type_with_columns.csv'
+original_file = '../../datasets/covertype/cover_type_with_columns.csv'
 origin = pd.read_csv(original_file)
 
 np.random.seed(seed)
@@ -63,7 +63,7 @@ results = {
     'indices': indices
 }
 
-np.save(f"/home/zhengyihao/TabularMark/datasets/covertype/watermarked/{dataset}-{seed}.npy", results)
+np.save(f"../../datasets/covertype/watermarked/{dataset}-{seed}.npy", results)
 
 
 

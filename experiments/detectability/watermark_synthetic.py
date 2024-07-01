@@ -22,7 +22,7 @@ seed = args.seed
 dataset='synthetic'
 
 
-original_file = '/home/zhengyihao/TabularMark/datasets/synthetic_dataset/synthetic_data.csv'
+original_file = '../../datasets/synthetic_dataset/synthetic_data.csv'
 origin = pd.read_csv(original_file)
 
 np.random.seed(seed)
@@ -63,7 +63,7 @@ results = {
     'indices': indices
 }
 
-np.save(f"/home/zhengyihao/TabularMark/datasets/synthetic_dataset/watermarked/{dataset}-{seed}.npy", results)
+np.save(f"../../datasets/synthetic_dataset/watermarked/{dataset}-{seed}.npy", results)
 
 
 

@@ -20,7 +20,7 @@ dataset='HOG'
 
 z_scores = []
 for seed in range(10000, 10001):
-    loaded_results = np.load(f"/home/zhengyihao/TabularMark/datasets/HOG/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
+    loaded_results = np.load(f"../../datasets/HOG/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
     watermarked_data = loaded_results['watermarked_data']
     divide_seeds = loaded_results['divide_seeds']
     indices = loaded_results['indices'] 

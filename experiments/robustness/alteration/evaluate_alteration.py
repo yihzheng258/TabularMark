@@ -10,14 +10,14 @@ dataset = 'covertype'
 seed = 10000
 
 # 读取数据
-origin = pd.read_csv("/home/zhengyihao/TabularMark/datasets/covertype/cover_type_with_columns.csv")
+origin = pd.read_csv("../../../datasets/covertype/cover_type_with_columns.csv")
 
 proportions = [0.2, 0.4, 0.6, 0.8, 1.0]
 
 for proportion in proportions:
-    loaded_results = np.load(f"/home/zhengyihao/TabularMark/datasets/covertype/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
+    loaded_results = np.load(f"../../../datasets/covertype/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
     # watermarked_data = loaded_results['watermarked_data']
-    watermarked_data = pd.read_csv(f"/home/zhengyihao/TabularMark/datasets/covertype/alteration/{dataset}-{seed}-{proportion}-{0}.csv")
+    watermarked_data = pd.read_csv(f"../../../datasets/covertype/alteration/{dataset}-{seed}-{proportion}-{0}.csv")
     divide_seeds = loaded_results['divide_seeds']
     indices = loaded_results['indices']
 

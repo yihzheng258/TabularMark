@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import math
 
-n = 300 # number of key cells
+n = 400 # number of key cells
 gamma = 1/2 # ratio between the length of green domain and red domain
 
 parser = argparse.ArgumentParser()
@@ -19,9 +19,9 @@ dataset='covertype'
 
 z_scores = []
 for seed in range(10000, 10001):
-    loaded_results = np.load(f"/home/zhengyihao/TabularMark/datasets/covertype/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
+    loaded_results = np.load(f"../../datasets/covertype/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
     # watermarked_data = loaded_results['watermarked_data']
-    watermarked_data = pd.read_csv(f"/home/zhengyihao/TabularMark/datasets/covertype/alteration/covertype-{seed}-1.0-0.csv")
+    watermarked_data = pd.read_csv(f"../../datasets/covertype/alteration/covertype-{seed}-1.0-0.csv")
     divide_seeds = loaded_results['divide_seeds']
     indices = loaded_results['indices']
     #添加水印

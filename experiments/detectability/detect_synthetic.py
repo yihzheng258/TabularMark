@@ -22,15 +22,15 @@ args = parser.parse_args()
 seed = args.seed
 dataset='synthetic'
 
-original_file = '/home/zhengyihao/TabularMark/datasets/synthetic_dataset/synthetic_data.csv'
+original_file = '../../datasets/synthetic_dataset/synthetic_data.csv'
 origin = pd.read_csv(original_file)
 
 
 z_scores = []
 for seed in range(10000, 10001):
-    loaded_results = np.load(f"/home/zhengyihao/TabularMark/datasets/synthetic_dataset/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
+    loaded_results = np.load(f"../../datasets/synthetic_dataset/watermarked/{dataset}-{seed}.npy", allow_pickle=True).item()
     # watermarked_data = loaded_results['watermarked_data']
-    watermarked_data = pd.read_csv('/home/zhengyihao/TabularMark/datasets/synthetic_dataset/ROC/synthetic-10000-0.6-50.csv')
+    watermarked_data = pd.read_csv('../../datasets/synthetic_dataset/ROC/synthetic-10000-0.6-50.csv')
     divide_seeds = loaded_results['divide_seeds']
     indices = loaded_results['indices']
     green_cell = 0

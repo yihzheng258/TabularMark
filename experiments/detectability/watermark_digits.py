@@ -16,7 +16,7 @@ args = parser.parse_args()
 seed = args.seed
 dataset='HOG'
 
-original_file = '/home/zhengyihao/TabularMark/datasets/HOG/digits_HOG.csv'
+original_file = '../../datasets/HOG/digits_HOG.csv'
 origin = pd.read_csv(original_file)
 
 np.random.seed(seed)
@@ -62,7 +62,7 @@ results = {
     'indices': indices
 }
 
-np.save(f"/home/zhengyihao/TabularMark/datasets/HOG/watermarked/{dataset}-{seed}.npy", results)
+np.save(f"../../datasets/HOG/watermarked/{dataset}-{seed}.npy", results)
 
 
 
