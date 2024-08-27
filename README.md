@@ -1,6 +1,8 @@
 # TabularMark
 This repository implements experiments for TabularMark. The idea is to perturb a small proportion of cells in a tabular dataset to embed watermarks.
 
+## Dataset
+The datasets used in the experiments can be downloaded from [this link](https://drive.google.com/file/d/10efT2gKtR8BjDOwYkQwDnirQtsA5wIxW/view?usp=sharing). After downloading `datasets.zip`, unzip it and place the `dataset` folder in the TabularMark directory.
 
 ## Usage
 All the experimental code is located in the `/experiments` directory. Each experiment is contained in its respective folder. To run an experiment, simply navigate to the appropriate directory and execute the scripts. 
